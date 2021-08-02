@@ -1,0 +1,25 @@
+{
+  "id" : "18bb8fbc-c6e6-4310-8758-ef7d8eeffc8c",
+  "name" : "login_v1_finbyuserid",
+  "request" : {
+    "url" : "/login/v1/finByUserId",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\r\n  \"userId\": \"test1\"\r\n}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"statusResponse\":{\"statusCode\":200,\"statusMessage\":\"Customer details fetched Successfully\"},\"userId\":\"test1\"}",
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Fri, 30 Jul 2021 09:57:28 GMT",
+      "Keep-Alive" : "timeout=60"
+    }
+  },
+  "uuid" : "18bb8fbc-c6e6-4310-8758-ef7d8eeffc8c",
+  "persistent" : true,
+  "insertionIndex" : 13
+}

@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: reg-service
+    
+server:
+  port: 8081

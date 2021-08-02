@@ -1,0 +1,25 @@
+{
+  "id" : "30bc86b1-4c9c-47b8-ae7b-43ed64651d19",
+  "name" : "find_v1_finbyuserid",
+  "request" : {
+    "url" : "/find/v1/finByUserId",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\r\n  \"userId\": \"test1\"\r\n}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"userId\":\"test1\",\"statusResponse\":{\"statusCode\":200,\"statusMessage\":\"Customer details fetched Successfully\"}}",
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Mon, 02 Aug 2021 11:01:57 GMT",
+      "Keep-Alive" : "timeout=60"
+    }
+  },
+  "uuid" : "30bc86b1-4c9c-47b8-ae7b-43ed64651d19",
+  "persistent" : true,
+  "insertionIndex" : 5
+}

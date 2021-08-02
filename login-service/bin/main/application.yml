@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: login-service
+  main:
+    allow-bean-definition-overriding: true
+    
+server:
+  port: 8082

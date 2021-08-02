@@ -1,0 +1,25 @@
+apply plugin: "java"
+
+configurations{
+	swagger
+}
+
+dependencies {
+	swagger "io.swagger:swagger-codegen-cli:2.2.2"
+}
+
+task genSwaggerForRegistrationService(type: JavaExec){
+	 classpath = configurations.swagger
+	 
+	 main= "io.swagger.codegen.SwaggerCodegen"
+	 def inputSpec = "$rootDir/src/main/resources/json/reg-service.json"
+	 
+	 args = ['generate', '-l', 'spring',
+	 	  '--model-package',"com.login.service.reg.service",
+	 	  '--additional-properties', "serializableModel=true",
+	 	  "-o", "build/swagger", "-i", "${inputSpec}"]
+	 	  
+	 jvmArgs = ["-Dmodels"]
+}
+
+compileJava.dependsOn genSwaggerForRegistrationService

@@ -1,0 +1,20 @@
+configurations{
+	integtestImplementation.extendsFrom testImplementation
+}
+
+sourceSets{
+	integTest {
+		java {
+			compileClasspath += configurations.integtestImplementation + test.output + sourceSets.main.output
+			runtimeClasspath += configurations.integtestImplementation + test.output + sourceSets.main.output
+		}
+		resources
+	}
+}
+
+task integrationTest(type: Test, description: "Integration tests") {
+	useJUnitPlatform()
+	systemProperties System.properties
+	classpath += sourceSets.integTest.runtimeClasspath + sourceSets.integTest.compileClasspath
+	testClassesDirs = sourceSets.integTest.output.classesDirs
+}

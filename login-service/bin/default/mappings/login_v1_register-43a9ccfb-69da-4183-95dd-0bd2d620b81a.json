@@ -1,0 +1,25 @@
+{
+  "id" : "43a9ccfb-69da-4183-95dd-0bd2d620b81a",
+  "name" : "login_v1_register",
+  "request" : {
+    "url" : "/login/v1/register",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\r\n  \"addressRequest\": {\r\n    \"addressLine\": \"Line 2\",\r\n    \"state\": \"AP\",\r\n    \"zipcode\": 5223\r\n  },\r\n  \"password\": \"pass123\",\r\n  \"userId\": \"test\"\r\n}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"statusResponse\":{\"statusCode\":200,\"statusMessage\":\"Customer registered Successfully\"},\"userId\":\"test\"}",
+    "headers" : {
+      "Content-Type" : "application/json",
+      "Date" : "Fri, 30 Jul 2021 12:26:35 GMT",
+      "Keep-Alive" : "timeout=60"
+    }
+  },
+  "uuid" : "43a9ccfb-69da-4183-95dd-0bd2d620b81a",
+  "persistent" : true,
+  "insertionIndex" : 17
+}
